@@ -4,9 +4,21 @@
       <title>Daily Harvest FEC</title>
     </head>
     <body>
-      <div id="descriptionComp"></div>
-      <div id="photosComp"></div>
-      <div id="ingredientsComp"></div>
-      <div id="descriptionComp"></div>
+      <div id="description"></div>
+      <div id="root"></div>
+      <div id="app"></div>
+      <div id="reviews"></div>
+
+      <script src="http://localhost:6001/bundle.js"></script>
+      <script src="http://localhost:3000/bundle.js"></script>
+      <script src="http://localhost:8080/bundle.js"></script>
+      <script src="http://localhost:9000/bundle.js"></script>
+
+      <script>
+        ReactDOM.render(React.createElement(Descriptions), document.getElementById('description'));
+        ReactDOM.render(React.createElement(Photos), document.getElementById('root'));
+        ReactDOM.render(React.createElement(App), document.getElementById('app'));
+        ReactDOM.render(React.createElement(ComponentReviews), document.getElementById('reviews'));
+      </script>
     </body>
 </html>
