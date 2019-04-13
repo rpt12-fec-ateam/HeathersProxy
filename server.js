@@ -1,56 +1,56 @@
 const express = require('express');
-const http = require('http');
-const path = require('path');
+const bodyParser = require('body-parser');
+const httpProxy = require('http-proxy');
 
 //Creating connection to Proxy
-const httpProxy = require('http-proxy');
+const app = express();
 const proxy = httpProxy.createProxyServer();
 
-
-const app = express();
 //For Description & Ingredients
-app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 //For Photos
 app.use('/', express.static(__dirname + '/public'));
 //For Reviews
 app.use('/item/:id', express.static(__dirname + '/public'));
 
-//To Description (Anait)
-app.get('/description', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:8080' });
+// To Description (Anait)
+app.all('/description', (req, res) => {
+  proxy.web(req, res, { target: 'http://localhost:8080' });
 });
 
 //To Photos (Andrew)
-app.get('/items', (req, res) => {
+app.all('/items', (req, res) => {
   proxy.web(req, res, { target: 'http://localhost:3000' });
 });
   
-app.get('/images', (req, res) => {
+app.all('/images', (req, res) => {
   proxy.web(req, res, { target: 'http://localhost:3000' });
 });
   
-app.get('/benefits', (req, res) => {
+app.all('/benefits', (req, res) => {
   proxy.web(req, res, { target: 'http://localhost:3000' });
 });
 
-app.get('/item-benefits', (req, res) => {
+app.all('/item-benefits', (req, res) => {
   proxy.web(req, res, { target: 'http://localhost:3000' });
 });
 
 //To Ingredients (Heather)
-app.get('/test', function (req, res) {
+app.all('/test', function (req, res) {
     proxy.web(req, res, { target: 'http://localhost:6001' });
 });
 
 //To Reviews (Aarushi)
-app.get('/allReviews/item/:id', function(req, res) {
+app.all('/allReviews/item/:id', function(req, res) {
   proxy.web(req, res, { target: 'http://localhost:9000' });
 });
   
-app.get('/allItems/item/:id', function(req, res) {
+app.all('/allItems/item/:id', function(req, res) {
   proxy.web(req, res, { target: 'http://localhost:9000' });
 });
 
-app.listen(6000, () => {
-  console.log('Proxy server listening on port 6000');
+app.listen(6060, () => {
+  console.log('Proxy server listening on port 6060');
 });

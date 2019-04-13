@@ -4,6 +4,7 @@
       <title>Daily Harvest FEC</title>
     </head>
     <body>
+      <h3>Daily Harvest FEC</h3>
       <div id="description"></div>
       <div id="root"></div>
       <div id="app"></div>
@@ -13,7 +14,9 @@
       <script src="http://localhost:3000/bundle.js"></script>
       <script src="http://localhost:8080/bundle.js"></script>
       <script src="http://localhost:9000/bundle.js"></script>
-
+      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+      <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
       <script>
         ReactDOM.render(React.createElement(Descriptions), document.getElementById('description'));
         ReactDOM.render(React.createElement(Photos), document.getElementById('root'));
