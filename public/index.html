@@ -5,9 +5,9 @@
     </head>
     <body>
       <h3>Daily Harvest FEC</h3>
-      <div id="description"></div>
-      <div id="root"></div>
       <div id="app"></div>
+      <div id="root"></div>
+      <div id="heather"></div>
       <div id="reviews"></div>
 
       <script src="http://localhost:6001/bundle.js"></script>
@@ -18,9 +18,9 @@
       <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
       <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
       <script>
-        ReactDOM.render(React.createElement(Descriptions), document.getElementById('description'));
-        ReactDOM.render(React.createElement(Photos), document.getElementById('root'));
         ReactDOM.render(React.createElement(App), document.getElementById('app'));
+        ReactDOM.render(React.createElement(Photos), document.getElementById('root'));
+        ReactDOM.render(React.createElement(Heather), document.getElementById('heather'));
         ReactDOM.render(React.createElement(ComponentReviews), document.getElementById('reviews'));
       </script>
     </body>

@@ -51,6 +51,6 @@ app.all('/allItems/item/:id', function(req, res) {
   proxy.web(req, res, { target: 'http://localhost:9000' });
 });
 
-app.listen(6060, () => {
-  console.log('Proxy server listening on port 6060');
+app.listen(6050, () => {
+  console.log('Proxy server listening on port 6050');
 });
