@@ -38,7 +38,7 @@ app.all('/item-benefits', (req, res) => {
 });
 
 //To Ingredients (Heather)
-app.all('/test', function (req, res) {
+app.all('/ingredients', function (req, res) {
     proxy.web(req, res, { target: 'http://3.17.5.131:6001/' });
 });
 
