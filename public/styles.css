@@ -1,0 +1,11 @@
+.top {
+  display: inline-block
+}
+
+#app {
+  float: right
+}
+
+#root {
+  float: left
+}
