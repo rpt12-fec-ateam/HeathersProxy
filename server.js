@@ -17,38 +17,38 @@ app.use('/item/:id', express.static(__dirname + '/public'));
 
 // To Description (Anait)
 app.all('/description', (req, res) => {
-  proxy.web(req, res, { target: 'http://localhost:8080' });
+  proxy.web(req, res, { target: 'http://18.222.100.32:8080/' });
 });
 
 //To Photos (Andrew)
 app.all('/items', (req, res) => {
-  proxy.web(req, res, { target: 'http://localhost:3000' });
+  proxy.web(req, res, { target: 'http://13.56.157.116:2000/' });
 });
   
 app.all('/images', (req, res) => {
-  proxy.web(req, res, { target: 'http://localhost:3000' });
+  proxy.web(req, res, { target: 'http://13.56.157.116:2000/' });
 });
   
 app.all('/benefits', (req, res) => {
-  proxy.web(req, res, { target: 'http://localhost:3000' });
+  proxy.web(req, res, { target: 'http://13.56.157.116:2000/' });
 });
 
 app.all('/item-benefits', (req, res) => {
-  proxy.web(req, res, { target: 'http://localhost:3000' });
+  proxy.web(req, res, { target: 'http://13.56.157.116:2000/' });
 });
 
 //To Ingredients (Heather)
 app.all('/test', function (req, res) {
-    proxy.web(req, res, { target: 'http://localhost:6001' });
+    proxy.web(req, res, { target: 'http://3.17.5.131:6001/' });
 });
 
 //To Reviews (Aarushi)
 app.all('/allReviews/item/:id', function(req, res) {
-  proxy.web(req, res, { target: 'http://localhost:9000' });
+  proxy.web(req, res, { target: 'http://18.191.183.189:9000/' });
 });
   
 app.all('/allItems/item/:id', function(req, res) {
-  proxy.web(req, res, { target: 'http://localhost:9000' });
+  proxy.web(req, res, { target: 'http://18.191.183.189:9000/' });
 });
 
 app.listen(6050, () => {

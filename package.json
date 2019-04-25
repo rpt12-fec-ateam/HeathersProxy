@@ -13,12 +13,22 @@
   "author": "Heather",
   "license": "MIT",
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
     "bootstrap": "^4.3.1",
     "chai": "^4.2.0",
     "express": "^4.16.4",
     "express-http-proxy": "^1.5.1",
     "http-proxy": "^1.17.0",
     "mocha": "^6.1.2",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
   }
 }
