@@ -16,7 +16,7 @@ app.use('/', express.static(__dirname + '/public'));
 app.use('/item/:id', express.static(__dirname + '/public'));
 
 // To Description (Anait)
-app.all('/description', (req, res) => {
+app.all('/test', (req, res) => {
   proxy.web(req, res, { target: 'http://18.221.121.108:8080/' });
 });
 
