@@ -44,11 +44,11 @@ app.all('/ingredients', function (req, res) {
 
 //To Reviews (Aarushi)
 app.all('/allReviews/item/:id', function(req, res) {
-  proxy.web(req, res, { target: 'http://18.191.183.189:9000/' });
+  proxy.web(req, res, { target: 'http://3.17.9.104:9000/' });
 });
   
 app.all('/allItems/item/:id', function(req, res) {
-  proxy.web(req, res, { target: 'http://18.191.183.189:9000/' });
+  proxy.web(req, res, { target: 'http://3.17.9.104:9000/' });
 });
 
 app.listen(6050, () => {
