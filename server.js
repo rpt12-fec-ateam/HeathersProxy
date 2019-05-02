@@ -22,19 +22,19 @@ app.all('/test', (req, res) => {
 
 //To Photos (Andrew)
 app.all('/items', (req, res) => {
-  proxy.web(req, res, { target: 'http://13.56.157.116:2000/' });
+  proxy.web(req, res, { target: 'http://54.183.191.223:2000/' });
 });
   
 app.all('/images', (req, res) => {
-  proxy.web(req, res, { target: 'http://13.56.157.116:2000/' });
+  proxy.web(req, res, { target: 'http://54.183.191.223:2000/' });
 });
   
 app.all('/benefits', (req, res) => {
-  proxy.web(req, res, { target: 'http://13.56.157.116:2000/' });
+  proxy.web(req, res, { target: 'http://54.183.191.223:2000/' });
 });
 
 app.all('/item-benefits', (req, res) => {
-  proxy.web(req, res, { target: 'http://13.56.157.116:2000/' });
+  proxy.web(req, res, { target: 'http://54.183.191.223:2000/' });
 });
 
 //To Ingredients (Heather)
