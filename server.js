@@ -17,7 +17,7 @@ app.use('/item/:id', express.static(__dirname + '/public'));
 
 // To Description (Anait)
 app.all('/test', (req, res) => {
-  proxy.web(req, res, { target: 'http://18.221.121.108:8080/' });
+  proxy.web(req, res, { target: 'http://18.191.206.21:8080/' });
 });
 
 //To Photos (Andrew)
