@@ -22,19 +22,19 @@ app.all('/test', (req, res) => {
 
 //To Photos (Andrew)
 app.all('/items', (req, res) => {
-  proxy.web(req, res, { target: 'http://54.183.191.223:2000/' });
+  proxy.web(req, res, { target: 'http://13.56.207.29:2000/' });
 });
   
 app.all('/images', (req, res) => {
-  proxy.web(req, res, { target: 'http://54.183.191.223:2000/' });
+  proxy.web(req, res, { target: 'http://13.56.207.29:2000/' });
 });
   
 app.all('/benefits', (req, res) => {
-  proxy.web(req, res, { target: 'http://54.183.191.223:2000/' });
+  proxy.web(req, res, { target: 'http://13.56.207.29:2000/' });
 });
 
 app.all('/item-benefits', (req, res) => {
-  proxy.web(req, res, { target: 'http://54.183.191.223:2000/' });
+  proxy.web(req, res, { target: 'http://13.56.207.29:2000/' });
 });
 
 //To Ingredients (Heather)
@@ -44,11 +44,11 @@ app.all('/ingredients', function (req, res) {
 
 //To Reviews (Aarushi)
 app.all('/allReviews/item/:id', function(req, res) {
-  proxy.web(req, res, { target: 'http://3.17.9.104:9000/' });
+  proxy.web(req, res, { target: 'http://18.191.122.75:9000/' });
 });
   
 app.all('/allItems/item/:id', function(req, res) {
-  proxy.web(req, res, { target: 'http://3.17.9.104:9000/' });
+  proxy.web(req, res, { target: 'http://18.191.122.75:9000/' });
 });
 
 app.listen(6050, () => {
